@@ -46,10 +46,10 @@ $class: incrementClass; //!default
     }
 }
 
-@for $i from 1 through 12 {
-    $width: percentage(1 / $i);
+@for $incrementation from 1 through 20 {
+    $width: percentage(1 / $incrementation);
 
-    .newColumn-#{$i} {
+    .newColumn-#{$incrementation} {
         width: $width;
     }
 }
