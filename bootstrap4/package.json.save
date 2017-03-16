@@ -1,0 +1,7 @@
+npm install bootstrap@4.0.0-alpha.6
+{
+    "name": "exemple-de-projet",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt": "~0.4.1"
+    }
