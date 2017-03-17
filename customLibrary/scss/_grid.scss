@@ -1,0 +1,26 @@
+$columns: 12;
+$row-size: 100%;
+
+@mixin col($row-size) {
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+            width: percentage($row-size * $i);
+            float: left;
+        }
+    }
+}
+
+@include col(1200);
+
+
+%clearfix {
+    &:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+.row {
+    @extend %clearfix;
+}
