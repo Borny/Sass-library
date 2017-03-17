@@ -3,6 +3,13 @@
 @import 'placeholder';
 @import 'grid';
 
+/////////////////////
+// Box Sizing
+/////////////////////
+* {
+    box-sizing: border-box;
+}
+
 @import url(//fonts.googleapis.com/css?family=Roboto:700,400,500,300);
 
 div,h1,h2,h3,p,span,ul,li,a{
@@ -26,4 +33,9 @@ div,h1,h2,h3,p,span,ul,li,a{
     margin: 10px 0 0;
     border: 1px solid $black;
     border-radius: 4px;
+}
+
+.container{
+    max-width: $screen-lg;
+    margin: 0 auto;
 }
