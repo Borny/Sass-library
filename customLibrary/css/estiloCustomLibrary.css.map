@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAKQ,qEAA6D,CAErE,2BAA2B,CACvB,WAAW,CCLM,yCAA6C,CDQlE,KAAK,CACD,UAAU,CCyCP,OAAO,CDtCd,IAAI,CACA,UAAU,CCYR,OAAO,CDTb,MAAM,CACF,UAAU,CCwBN,OAAO,CDrBf,cAAc,CACV,OAAO,CAAE,IAAI,CACb,MAAM,CAAE,QAAQ,CAChB,MAAM,CAAE,cAAgB,CACxB,aAAa,CAAE,GAAG",
+"sources": ["../scss/estiloCustomLibrary.scss","../scss/_variables.scss"],
 "names": [],
 "file": "estiloCustomLibrary.css"
 }

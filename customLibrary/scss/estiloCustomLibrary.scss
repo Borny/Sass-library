@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins';
+@import 'placeholder';
+@import 'grid';
+
+@import url(//fonts.googleapis.com/css?family=Roboto:700,400,500,300);
+
+div,h1,h2,h3,p,span,ul,li,a{
+    font-family: $font-family-roboto;
+}
+
+.blue{
+    background: $blue;
+}
+
+.red{
+    background: $red;
+}
+
+.green{
+    background: $green;
+}
+
+[class^='col']{
+    padding: 20px;
+    margin: 10px 0 0;
+    border: 1px solid $black;
+    border-radius: 4px;
+}
