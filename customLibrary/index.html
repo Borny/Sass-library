@@ -12,92 +12,106 @@
 
 <body>
 
-    <header class="jumbotron">
-        <h1>Custom Library Test</h1>
-        <p>Creating a custom library</p>
-    </header>
+<header>
+    <h1>Custom Library Test</h1>
+    <p>Creating a custom library</p>
+</header>
 
-    <nav>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </nav>
-
-    <section class="container">
-
+<section class="container">
+    <input id="dropdown_grid" type="checkbox">
+    <label class="dropdown" for="dropdown_grid">
+        <p>Grid</p>
         <div class="row">
             <div class="col red">Col 12</div>
-        </div> 
+        </div>
         <div class="row">
             <div class="col-1 blue">Col 1</div>
             <div class="col-11 red">Col 11</div>
-        </div> 
+        </div>
         <div class="row">
             <div class="col-2 blue">Col 2</div>
             <div class="col-10 red">Col 10</div>
-        </div>      
+        </div>
         <div class="row">
             <div class="col-3 blue">Col 3</div>
             <div class="col-9 red">Col 9</div>
-        </div> 
+        </div>
         <div class="row">
             <div class="col-4 blue">Col 4</div>
             <div class="col-8 red">Col 8</div>
-        </div>  
+        </div>
         <div class="row">
             <div class="col-5 blue">Col 5</div>
             <div class="col-7 red">Col 7</div>
-        </div> 
+        </div>
         <div class="row">
             <div class="col-6 blue">Col 6</div>
             <div class="col-6 red">Col 6</div>
-        </div>  
+        </div>
         <div class="row">
             <div class="col-7 blue">Col 7</div>
             <div class="col-5 red">Col 5</div>
-        </div>  
+        </div>
         <div class="row">
             <div class="col-8 blue">Col 8</div>
             <div class="col-4 red">Col 4</div>
-        </div>      
+        </div>
         <div class="row">
             <div class="col-9 blue">Col 9</div>
             <div class="col-3 red">Col 3</div>
-        </div>  
+        </div>
         <div class="row">
             <div class="col-10 blue">Col 10</div>
             <div class="col-2 red">Col 2</div>
-        </div>      
+        </div>
         <div class="row">
             <div class="col-11 blue">Col 11</div>
             <div class="col-1 red">Col 1</div>
-        </div> 
+        </div>
         <div class="row">
             <div class="col blue">Col 12</div>
-        </div> 
-        <div class="row">
-            <div class="col-4 blue">Col 4</div>
-            <div class="col-4 red">Col 4</div>
-            <div class="col-4 blue">Col 4</div>
-        </div> 
-
-        <div class="row">
-            <div class="col-push-1 col-4 blue">Col 4</div>
-            <div class="col-4 red">Col 4</div>
-            <div class="col-pull-1 col-4 green">Col 4</div>
         </div>
+        <div class="row">
+            <div class="col-4 blue">Col 4</div>
+            <div class="col-4 red">Col 4</div>
+            <div class="col-4 blue">Col 4</div>
+        </div>
+    </label>
+</section>
 
-    </section>
+<section class="container">
+    <input id="dropdown_tab" type="checkbox">
+    <label class="dropdown" for="dropdown_tab">
+        <p>Tabs</p>
+    </label>
+</section>
 
-    <section></section>
-    <section></section>
+<section class="container">
+    <input id="dropdown_modal" type="checkbox">
+    <label class="dropdown" for="dropdown_modal">
+        <p>Modal HTML/CSS</p>
+        <a href="#modalOpen" class="btn__modal--open">
+            Activate Modal
+        </a>
 
-    <footer>
-        <p>Footer</p>
-    </footer>
+    </label>
+</section>
+
+<footer>
+    <p>Footer</p>
+</footer>
+
+<!--Modal-->
+<div class="modalHtml" aria-hidden="true">
+    <div class="modal--dialog">
+        <div class="modal--header">
+            <h2>Modal HTML/CSS</h2>
+        </div>
+        <div class="modal--body">
+            <p>Modal HTML/CSS</p>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
