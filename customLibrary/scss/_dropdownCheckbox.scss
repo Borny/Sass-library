@@ -1,0 +1,70 @@
+//This file makes use of a checkbox as a dropdown trigger,
+//which doesn't require JavaScript
+
+input[type=checkbox] {
+    display: none;
+    //checkbox in checked state
+    &:checked {
+        ~ .dropdown {
+            height: 1100px;
+            p {
+                &:after {
+                    -webkit-transform: rotate(540deg);
+                    -moz-transform: rotate(540deg);
+                    -ms-transform: rotate(540deg);
+                    -o-transform: rotate(540deg);
+                    transform: rotate(540deg);
+                }
+            }
+            .iconPlus {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            .minus {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            ul {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//dropdown element
+.dropdown {
+    @include animate;
+    display: block;
+    height: 90px;
+    margin: 50px auto 10px;
+    padding: 10px 15px;
+    overflow: hidden;
+    cursor: pointer;
+    background: $white;
+    border-radius: 4px;
+    p {
+        position: relative;
+        height: 40px;
+        color:$blue;
+        font-size: 32px;
+        border-bottom: 1px solid $blue-light1;
+        &:after {
+            @include animate;
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 8px 0 8px;
+            border-color: $blue transparent transparent transparent;
+        }
+    }
+}

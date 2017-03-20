@@ -76,3 +76,8 @@ $list: peter matt bruce steve tony clint natasha;
     @extend .steve;
     height: 500px;
 }
+
+
+footer{
+    @include make-grid();
+}
