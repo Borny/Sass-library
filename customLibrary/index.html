@@ -18,101 +18,134 @@
 </header>
 
 <section class="container">
-    <input id="dropdown_grid" type="checkbox">
-    <label class="dropdown" for="dropdown_grid">
+    <input id="collapse_grid" type="checkbox">
+    <label class="collapse-btn" for="collapse_grid">
         <p>Grid</p>
+    </label>
+    <div class="collapse-content">
         <div class="row">
-            <div class="col red">Col 12</div>
+            <div class="column green">Col 12</div>
         </div>
         <div class="row">
             <div class="col-1 blue">Col 1</div>
-            <div class="col-11 red">Col 11</div>
+            <div class="col-11 green">Col 11</div>
         </div>
         <div class="row">
             <div class="col-2 blue">Col 2</div>
-            <div class="col-10 red">Col 10</div>
+            <div class="col-10 green">Col 10</div>
         </div>
         <div class="row">
             <div class="col-3 blue">Col 3</div>
-            <div class="col-9 red">Col 9</div>
+            <div class="col-9 green">Col 9</div>
         </div>
         <div class="row">
             <div class="col-4 blue">Col 4</div>
-            <div class="col-8 red">Col 8</div>
+            <div class="col-8 green">Col 8</div>
         </div>
         <div class="row">
             <div class="col-5 blue">Col 5</div>
-            <div class="col-7 red">Col 7</div>
+            <div class="col-7 green">Col 7</div>
         </div>
         <div class="row">
             <div class="col-6 blue">Col 6</div>
-            <div class="col-6 red">Col 6</div>
+            <div class="col-6 green">Col 6</div>
         </div>
         <div class="row">
             <div class="col-7 blue">Col 7</div>
-            <div class="col-5 red">Col 5</div>
+            <div class="col-5 green">Col 5</div>
         </div>
         <div class="row">
             <div class="col-8 blue">Col 8</div>
-            <div class="col-4 red">Col 4</div>
+            <div class="col-4 green">Col 4</div>
         </div>
         <div class="row">
             <div class="col-9 blue">Col 9</div>
-            <div class="col-3 red">Col 3</div>
+            <div class="col-3 green">Col 3</div>
         </div>
         <div class="row">
             <div class="col-10 blue">Col 10</div>
-            <div class="col-2 red">Col 2</div>
+            <div class="col-2 green">Col 2</div>
         </div>
         <div class="row">
             <div class="col-11 blue">Col 11</div>
-            <div class="col-1 red">Col 1</div>
+            <div class="col-1 green">Col 1</div>
         </div>
         <div class="row">
-            <div class="col blue">Col 12</div>
+            <div class="column blue">Col 12</div>
         </div>
         <div class="row">
             <div class="col-4 blue">Col 4</div>
-            <div class="col-4 red">Col 4</div>
+            <div class="col-4 green">Col 4</div>
             <div class="col-4 blue">Col 4</div>
         </div>
-    </label>
+    </div>
 </section>
 
 <section class="container">
-    <input id="dropdown_tab" type="checkbox">
-    <label class="dropdown" for="dropdown_tab">
+    <input id="collapse_tab" type="checkbox">
+    <label class="collapse-btn" for="collapse_tab">
         <p>Tabs</p>
     </label>
+    <div class="collapse-content"></div>
 </section>
 
+<!--Open Modal HTML/CSS-->
 <section class="container">
-    <input id="dropdown_modal" type="checkbox">
-    <label class="dropdown" for="dropdown_modal">
+    <input id="collapse-modal_HTML" type="checkbox">
+    <label class="collapse-btn" for="collapse-modal_HTML">
         <p>Modal HTML/CSS</p>
-        <a href="#modalOpen" class="btn__modal--open">
-            Activate Modal
-        </a>
-
     </label>
+    <div class="collapse-content">
+        <a href="#modalOpen" class="btn_modal-open">
+            Activate HTML/CSS Modal
+        </a>
+    </div>
+</section>
+
+<!--Open Modal Checkbox-->
+<section class="container">
+    <input id="collapse-modal_checkbox" type="checkbox">
+    <label class="collapse-btn" for="collapse-modal_checkbox">
+        <p>Modal Checkbox</p>
+    </label>
+    <div class="collapse-content">
+        <label for="toggle-modal-checkbox" class="btn_modal-open">
+            Activate Checkbox Modal
+        </label>
+    </div>
 </section>
 
 <footer>
     <p>Footer</p>
 </footer>
 
-<!--Modal-->
-<div class="modalHtml" aria-hidden="true">
-    <div class="modal--dialog">
-        <div class="modal--header">
+<!--Modal HTML/CSS-->
+<div class="modalHtml" id="modalOpen" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <a href="#" class="btn-modal_close">x</a>
             <h2>Modal HTML/CSS</h2>
         </div>
-        <div class="modal--body">
+        <div class="modal-body">
             <p>Modal HTML/CSS</p>
         </div>
     </div>
 </div>
 
+<!--Modal Checkbox-->
+<div class="modalCheckbox" aria-hidden="true">
+    <input id="toggle-modal-checkbox" type="checkbox">
+    <label for="toggle-modal-checkbox" class="modal-overlay"></label>
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <label for="toggle-modal-checkbox" class="btn-modal_close">x</label>
+            <h2>Modal Checkbox</h2>
+        </div>
+        <div class="modal-body">
+            <p>Modal Checkbox</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
 

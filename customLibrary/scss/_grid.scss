@@ -1,9 +1,11 @@
 $columns: 12 !default;
-$row-size: 100%;
 
-@for $i from 1 through $columns {
-    .col-#{$i} {
-        width: percentage($i / $columns);
+@mixin generate-grid($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i},.col-md-#{$i}, .col-lg-#{$i}") {
+    @for $i from (1 +1) through $columns {
+        $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i},.col-md-#{$i}, .col-lg-#{$i}";
+    }
+    #{$list} {
+        //width: percentage($i / $columns);
         float: left;
     }
 }
@@ -17,7 +19,7 @@ $row-size: 100%;
 }
 
 .row {
-    width: 100%;
     @extend %clearfix;
 }
 
+@include generate-grid;

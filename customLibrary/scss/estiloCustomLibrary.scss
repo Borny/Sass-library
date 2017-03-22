@@ -2,7 +2,9 @@
 @import 'mixins';
 @import 'placeholder';
 @import 'grid';
-@import 'dropdownCheckbox';
+@import 'collapseCheckbox';
+@import 'modalHTML';
+@import 'modalCheckbox';
 
 /////////////////////
 // Box Sizing
@@ -16,11 +18,21 @@
 /////////////////////
 @import url(//fonts.googleapis.com/css?family=Roboto:700,400,500,300);
 
-div, h1, h2, h3, p, span, ul, li, a {
+div, h1, h2, h3, p, span, ul, li, a, label, input {
     font-family: $font-family-roboto;
 }
 
-body{
+////////////////////
+// Links
+////////////////////
+a {
+    text-decoration: none;
+}
+
+////////////////////
+// Styles
+////////////////////
+body {
     margin: 0;
     padding: 0;
 }
@@ -29,15 +41,16 @@ body{
     background: $blue;
 }
 
-.red {
-    background: $red;
+.green {
+    background: $green-gradient;
 }
 
 .green {
     background: $green;
 }
 
-[class^='col'] {
+[class^='col-'],
+.column{
     padding: 20px;
     margin: 10px 0 0;
     border: 1px solid $black;
@@ -50,16 +63,24 @@ body{
     margin: 0 auto;
 }
 
-header{
+header {
     padding: 30px;
     text-align: center;
     background: $black;
     color: $white;
 }
 
-footer{
+footer {
     text-align: center;
     padding: 40px;
     background: $black;
     color: $white;
+}
+
+input[type=checkbox] {
+    &:checked {
+        ~ .dropdown_modal {
+            height: 200px;
+        }
+    }
 }
