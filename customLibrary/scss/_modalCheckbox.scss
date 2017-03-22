@@ -13,6 +13,7 @@
     &:hover,
     &:focus {
         background: lighten($blue, 5);
+        cursor: pointer;
     }
     &:active {
         background: darken($blue, 5);
@@ -34,6 +35,7 @@
     &:hover,
     &:focus {
         background: lighten($red, 5);
+        cursor: pointer;
     }
     &:active {
         background: darken($red, 5);
@@ -54,7 +56,7 @@
     }
     .modal-dialog {
         position: fixed;
-        top: -1000px;
+        top: -100%;
         left: 50%;
         width: 300px;
         -webkit-transform: translateX(-50%);
