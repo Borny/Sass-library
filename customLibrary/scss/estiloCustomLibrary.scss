@@ -3,14 +3,16 @@
 @import 'placeholder';
 @import 'grid';
 @import 'collapseCheckbox';
-@import 'modalHTML';
 @import 'modalCheckbox';
+@import 'tabs';
 
 /////////////////////
 // Box Sizing
 /////////////////////
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /////////////////////

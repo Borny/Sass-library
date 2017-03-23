@@ -67,6 +67,20 @@
         z-index: $zindex-modal-dialog;
         border-radius: 4px;
         background: $white;
+        .modal-header{
+            padding: 15px 0;
+            background: $blue;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            text-align: center;
+            color: $white;
+            h2{
+                margin: 0;
+            }
+        }
+        .modal-body{
+            padding: 20px;
+        }
     }
 }
 
