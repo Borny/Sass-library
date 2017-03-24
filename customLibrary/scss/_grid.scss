@@ -54,7 +54,7 @@
 
 
 @mixin loop-column-width($columns, $class) {
-    @for $i from 0 through $columns {
+    @for $i from 1 through $columns {
         @include calculate-column-width($i, $class);
     }
 }
