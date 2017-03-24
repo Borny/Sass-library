@@ -3,6 +3,7 @@
 /////////////////////
 @mixin container-fixed {
     margin: 0 auto;
+    // Cancels float
     @extend %clearfix;
 }
 
@@ -22,70 +23,80 @@
 
 //row
 .row {
+    // Cancels float
     @extend %clearfix;
 }
 
 /////////////////////
-// Columns
+//Responsive columns
 /////////////////////
 
-//@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
-//    @for $i from (1+1) through $columns {
-//        $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
-//    }
-//    #{$list} {
-//        position: relative;
-//        float: left;
-//        // Prevent columns from collapsing when empty
-//        min-height: 1px;
-//    }
-//}
-//
-//@include make-grid-columns;
-//
-//@for $i from 1 through $columns {
-//    .col-#{$i} {
-//        width: percentage($i / $columns);
-//        float: left;
-//    }
-//}
-
-/////////////////////
-// Generate classes
-/////////////////////
-
-@mixin make-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
-    @for $i from (1+1) through $columns {
+//Sets common properties for all column elements
+@mixin float-grid-columns($class, $i: 1, $list : ".col-#{$class}-#{$i}") {
+    @for $i from (1 + 1) through $columns {
         $list: "#{$list}, .col-#{$class}-#{$i}";
     }
     #{$list} {
         position: relative;
-        float: left;
-        // Prevent columns from collapsing when empty
+        // Prevents columns from collapsing when empty
         min-height: 1px;
+        // Aligns the columns
+        float: left;
     }
 }
 
-@mixin grid-calculate($index, $class) {
+// Calculates the width of each columns
+@mixin calculate-column-width($index, $class) {
     .col-#{$class}-#{$index} {
-        width: percentage($index / $columns);
+        width: percentage(($index / $columns));
     }
 }
 
-@mixin loop-grid-generation($columns, $class) {
+
+@mixin loop-column-width($columns, $class) {
     @for $i from 0 through $columns {
-        @include grid-calculate($i, $class);
+        @include calculate-column-width($i, $class);
     }
 }
 
-@mixin create-grid($class) {
-    @include loop-grid-generation($columns, $class);
-}
-
+// Creates the classes
 @mixin make-grid($class) {
-    @include make-grid-columns($class);
-    @include create-grid($class);
+    @include float-grid-columns($class);
+    @include loop-column-width($columns, $class);
 }
 
-@include make-grid(sm);
+// Creates extra-small columns
+@media (min-width: $screen-xs) {
+    @include make-grid(xs);
+}
 
+// Creates small columns
+@media (min-width: $screen-sm) {
+    @include make-grid(sm);
+}
+
+// Creates medium columns
+@media (min-width: $screen-md) {
+    @include make-grid(md);
+}
+
+// Creates large columns
+@media (min-width: $screen-lg) {
+    @include make-grid(lg);
+}
+
+
+/////////////////////
+//Standard columns - (not responsive)
+/////////////////////
+
+@mixin make-standard-column {
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+            width: percentage($i / $columns);
+            float: left;
+        }
+    }
+}
+
+@include make-standard-column;
