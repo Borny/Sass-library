@@ -15,6 +15,9 @@
 <header>
     <h1>Custom Library Test</h1>
     <p>Creating a custom library</p>
+    <p class="nav-toggle">
+        <label for="toggle-nav-checkbox" class="btn-nav_open">Open Nav</label>
+    </p>
 </header>
 
 <!--Grid-->
@@ -138,7 +141,7 @@
 
 <!--Open Modal Checkbox-->
 <section class="container">
-    <input id="collapse-modal_checkbox" type="checkbox">
+    <input id="collapse-modal_checkbox" type="checkbox" class="modal-input">
     <label class="collapse-btn" for="collapse-modal_checkbox">
         <p>Modal Checkbox</p>
     </label>
@@ -153,9 +156,24 @@
     <p>Footer</p>
 </footer>
 
+<!--Menu-->
+<div class="nav-container">
+    <input id="toggle-nav-checkbox" type="checkbox" class="nav-input">
+    <label for="toggle-nav-checkbox" class="nav-overlay"></label>
+    <nav class="nav">
+        <label for="toggle-nav-checkbox" class="btn-nav_close">x</label>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Blog</li>
+        </ul>
+    </nav>
+</div>
+
 <!--Modal Checkbox-->
 <div class="modalCheckbox" aria-hidden="true">
-    <input id="toggle-modal-checkbox" type="checkbox">
+    <input id="toggle-modal-checkbox" type="checkbox" class="modal-input">
     <label for="toggle-modal-checkbox" class="modal-overlay"></label>
     <div class="modal-dialog">
         <div class="modal-header">
