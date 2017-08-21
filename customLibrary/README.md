@@ -4,8 +4,8 @@
 
 ## This library contains : 
 
-	- A Grid system based on 12 columns
-	- Tabs using radio inputs 
-	- Modals using checkbox inputs
-	- Inputs text/password 
+- A Grid system based on 12 columns
+- Tabs using radio inputs 
+- Modals using checkbox inputs
+- Inputs text/password 
 
