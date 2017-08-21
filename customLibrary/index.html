@@ -12,92 +12,225 @@
 
 <body>
 
-    <header class="jumbotron">
-        <h1>Custom Library Test</h1>
-        <p>Creating a custom library</p>
-    </header>
+<header>
+    <h1>Custom Library Test</h1>
+    <p>Creating a custom library</p>
+    <p class="nav-toggle">
+        <label for="toggle-nav-checkbox" class="btn-nav_open">Open Nav</label>
+    </p>
+</header>
 
-    <nav>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </nav>
+<!--Grid-->
+<section class="container">
+    <input id="collapse_grid" type="checkbox">
+    <label class="collapse-btn" for="collapse_grid">
+        <p>Grid</p>
+    </label>
+    <div class="collapse-content">
 
-    <section class="container">
+        <p>Standard grid</p>
 
         <div class="row">
-            <div class="col red">Col 12</div>
-        </div> 
+            <div class="column green">Col 12</div>
+        </div>
         <div class="row">
             <div class="col-1 blue">Col 1</div>
-            <div class="col-11 red">Col 11</div>
-        </div> 
+            <div class="col-11 green">Col 11</div>
+        </div>
         <div class="row">
             <div class="col-2 blue">Col 2</div>
-            <div class="col-10 red">Col 10</div>
-        </div>      
+            <div class="col-10 green">Col 10</div>
+        </div>
         <div class="row">
             <div class="col-3 blue">Col 3</div>
-            <div class="col-9 red">Col 9</div>
-        </div> 
+            <div class="col-9 green">Col 9</div>
+        </div>
         <div class="row">
             <div class="col-4 blue">Col 4</div>
-            <div class="col-8 red">Col 8</div>
-        </div>  
+            <div class="col-8 green">Col 8</div>
+        </div>
         <div class="row">
             <div class="col-5 blue">Col 5</div>
-            <div class="col-7 red">Col 7</div>
-        </div> 
+            <div class="col-7 green">Col 7</div>
+        </div>
         <div class="row">
             <div class="col-6 blue">Col 6</div>
-            <div class="col-6 red">Col 6</div>
-        </div>  
+            <div class="col-6 green">Col 6</div>
+        </div>
         <div class="row">
             <div class="col-7 blue">Col 7</div>
-            <div class="col-5 red">Col 5</div>
-        </div>  
+            <div class="col-5 green">Col 5</div>
+        </div>
         <div class="row">
             <div class="col-8 blue">Col 8</div>
-            <div class="col-4 red">Col 4</div>
-        </div>      
+            <div class="col-4 green">Col 4</div>
+        </div>
         <div class="row">
             <div class="col-9 blue">Col 9</div>
-            <div class="col-3 red">Col 3</div>
-        </div>  
+            <div class="col-3 green">Col 3</div>
+        </div>
         <div class="row">
             <div class="col-10 blue">Col 10</div>
-            <div class="col-2 red">Col 2</div>
-        </div>      
+            <div class="col-2 green">Col 2</div>
+        </div>
         <div class="row">
             <div class="col-11 blue">Col 11</div>
-            <div class="col-1 red">Col 1</div>
-        </div> 
+            <div class="col-1 green">Col 1</div>
+        </div>
         <div class="row">
-            <div class="col blue">Col 12</div>
-        </div> 
+            <div class="column blue">Col 12</div>
+        </div>
         <div class="row">
             <div class="col-4 blue">Col 4</div>
-            <div class="col-4 red">Col 4</div>
+            <div class="col-4 green">Col 4</div>
             <div class="col-4 blue">Col 4</div>
-        </div> 
-
-        <div class="row">
-            <div class="col-push-1 col-4 blue">Col 4</div>
-            <div class="col-4 red">Col 4</div>
-            <div class="col-pull-1 col-4 green">Col 4</div>
         </div>
 
-    </section>
+        <p>Responsive grid</p>
 
-    <section></section>
-    <section></section>
+        <div class="row">
+            <div class="col-xs-4 blue">Col 4</div>
+            <div class="col-xs-8 green">Col 8</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9 blue">Col 4</div>
+            <div class="col-sm-3 green">Col 8</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 blue">Col 4</div>
+            <div class="col-md-10 green">Col 8</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 blue">Col 4</div>
+            <div class="col-lg-7 green">Col 8</div>
+        </div>
 
-    <footer>
-        <p>Footer</p>
-    </footer>
+    </div>
+</section>
+
+<!--Tabs-->
+<section class="container">
+    <input id="collapse_tab" type="checkbox">
+    <label class="collapse-btn" for="collapse_tab">
+        <p>Tabs</p>
+    </label>
+    <div class="collapse-content">
+        <div class="tab-container">
+            <input type="radio" id="tab1" class="tab-input" name="tab" checked="checked">
+            <label for="tab1" class="tab-btn">Tab 1</label>
+            <div class="tab-content">
+                <p>Some text 1</p>
+            </div>
+        </div>
+        <div class="tab-container">
+            <input type="radio" id="tab2" class="tab-input" name="tab">
+            <label for="tab2" class="tab-btn">Tab 2</label>
+            <div class="tab-content">
+                <p>Some text 2</p>
+            </div>
+        </div>
+        <div class="tab-container">
+            <input type="radio" id="tab3" class="tab-input" name="tab">
+            <label for="tab3" class="tab-btn">Tab 3</label>
+            <div class="tab-content">
+                <p>Some text 3</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Open Modal Checkbox-->
+<section class="container">
+    <input id="collapse-modal_checkbox" type="checkbox">
+    <label class="collapse-btn" for="collapse-modal_checkbox">
+        <p>Modal Checkbox</p>
+    </label>
+    <div class="collapse-content">
+        <label for="toggle-modal-checkbox" class="btn_modal-open">
+            Activate Checkbox Modal
+        </label>
+    </div>
+</section>
+
+<!--Input-->
+<section class="container">
+    <input id="input" type="checkbox" class="modal-input">
+    <label class="collapse-btn" for="input">
+        <p>Input</p>
+    </label>
+    <div class="collapse-content">
+        <div class="input_container">
+            <div class="input_element input_text">
+                <input class="input_field" type="text">
+                <label class="input_label">
+                    <span class="input_label-content">Name</span>
+                </label>
+                <button class="clear-input"></button>
+            </div>
+
+            <div class="input_element input_text">
+                <input class="input_field"  class="input_field" type="text">
+                <label class="input_label">
+                    <span class="input_label-content">Address</span>
+                </label>
+                <span class="clear-input"></span>
+            </div>
+
+            <div class="input_element input_text">
+                <input  class="input_field" class="input_field" type="text ">
+                <label class="input_label">
+                    <span class="input_label-content">Phone</span>
+                </label>
+                <span class="clear-input"></span>
+            </div>
+
+            <div class="input_element input_text">
+                <input  class="input_field" class="input_field" type="text">
+                <label class="input_label">
+                    <span class="input_label-content">Email</span>
+                </label>
+                <span class="clear-input"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Footer-->
+<footer>
+    <p>Footer</p>
+</footer>
+
+<!--Menu-->
+<div class="nav-container">
+    <input id="toggle-nav-checkbox" type="checkbox" class="nav-input">
+    <label for="toggle-nav-checkbox" class="nav-overlay"></label>
+    <nav class="nav">
+        <label for="toggle-nav-checkbox" class="btn-nav_close">x</label>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Blog</li>
+        </ul>
+    </nav>
+</div>
+
+<!--Modal Checkbox-->
+<div class="modalCheckbox" aria-hidden="true">
+    <input id="toggle-modal-checkbox" type="checkbox" class="modal-input">
+    <label for="toggle-modal-checkbox" class="modal-overlay"></label>
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <label for="toggle-modal-checkbox" class="btn-modal_close">x</label>
+            <h2>Modal Checkbox</h2>
+        </div>
+        <div class="modal-body">
+            <p>Modal Checkbox</p>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
 
 </body>
 </html>
