@@ -1,12 +1,15 @@
-@import 'variables';
-@import 'mixins';
-@import 'placeholder';
-@import 'grid';
-@import 'collapse-checkbox';
-@import 'modal-checkbox';
-@import 'tabs-checkbox';
-@import 'nav-checkbox';
-@import 'input';
+// TOOLS
+@import 'tools/variables';
+@import 'tools/mixins';
+@import 'tools/placeholder';
+@import 'tools/grid';
+
+// MODULES
+@import 'modules/collapse-checkbox';
+@import 'modules/modal-checkbox';
+@import 'modules/tabs-checkbox';
+@import 'modules/nav-checkbox';
+@import 'modules/input';
 
 /////////////////////
 // Box Sizing
