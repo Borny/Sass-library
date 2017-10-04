@@ -1,19 +1,19 @@
 // TOOLS
 @import 'tools/variables';
 @import 'tools/mixins';
-@import 'tools/placeholder';
-@import 'tools/grid';
+@import 'tools/placeholders';
+@import 'grid/grid';
 
 // MODULES
-@import 'modules/collapse-checkbox';
-@import 'modules/modal-checkbox';
-@import 'modules/tabs-checkbox';
-@import 'modules/nav-checkbox';
-@import 'modules/input';
+@import 'collapse/collapse';
+@import 'modal/modal';
+@import 'tabs/tabs';
+@import 'nav/nav';
+@import 'input/input';
 
-/////////////////////
-// Box Sizing
-/////////////////////
+///////////////
+// BOX SIZING
+///////////////
 * {
     box-sizing: border-box;
     margin: 0;
@@ -24,16 +24,16 @@ div, h1, h2, h3, p, span, ul, li, a, label, input {
     font-family: $font-family-roboto;
 }
 
-////////////////////
-// Links
-////////////////////
+//////////
+// LINKS
+//////////
 a {
     text-decoration: none;
 }
 
-////////////////////
-// Styles
-////////////////////
+///////////
+// STYLES
+///////////
 body {
     margin: 0;
     padding: 0;
