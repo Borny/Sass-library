@@ -1,8 +1,8 @@
-#Sass Library
+# Sass Library
 
-##This is a custom library with the aim of getting rid of Bootstrap
+## This is a custom library with the aim of getting rid of Bootstrap
 
-##This library contains : 
+## This library contains : 
 
 - A Grid system
 - Tabs using radio inputs 
