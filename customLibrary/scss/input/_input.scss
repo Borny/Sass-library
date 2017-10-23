@@ -15,6 +15,7 @@
 .input_text {
     display: block;
     margin: 20px auto;
+
     // when the input is filled
     &.filled {
         .input_field {
@@ -27,6 +28,7 @@
             }
         }
     }
+
     // error state
     &.error {
         .input_field {
@@ -45,19 +47,19 @@
     border-radius: 0;
     font-size: 1.15em;
     color: $gray;
-    border-bottom: 1px solid $gray-light4;
+    border-bottom: 1px solid $gray-light;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     &:hover {
         ~ .input_label {
-            color: $gray-light2;
+            color: $gray-light;
         }
     }
     &:focus {
         border: none;
         outline: 0;
-        border-bottom: 1px solid $blue-light2;
+        border-bottom: 1px solid $blue-light;
         ~ .input_label {
             .input_label-content {
                 -webkit-transform: translate3d(0, -1.4em, 0) scale3d(0.8, 0.8, 0.8);
@@ -69,7 +71,7 @@
 
 .input_label {
     display: inline-block;
-    color: $gray-light4;
+    color: $gray-light;
     .input_label-content {
         display: block;
         padding: .9em 0 .7em;

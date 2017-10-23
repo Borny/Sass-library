@@ -1,3 +1,26 @@
+///////////////////////
+// CANCEL BODY SCROLL
+///////////////////////
+var bodyBlock = document.querySelector('body'),
+    navInput = document.querySelector('.nav-input'),
+    modalInput = document.querySelector('.modal-input');
+
+navInput.addEventListener('change',function(){
+    if(this.checked){
+        bodyBlock.classList.add('modal-open');
+    } else{
+        bodyBlock.classList.remove('modal-open');        
+    }
+});
+
+modalInput.addEventListener('change',function(){
+    if(this.checked){
+        bodyBlock.classList.add('modal-open');
+    } else{
+        bodyBlock.classList.remove('modal-open');        
+    }
+});
+
 //////////////////////////
 // INPUT LABEL ANIMATION
 //////////////////////////

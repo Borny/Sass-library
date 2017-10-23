@@ -37,14 +37,13 @@ a {
 body {
     margin: 0;
     padding: 0;
+    &.modal-open{
+        overflow: hidden;
+    }
 }
 
 .blue {
     background: $blue;
-}
-
-.green {
-    background: $green-gradient;
 }
 
 .green {
@@ -62,7 +61,7 @@ body {
 header {
     padding: 30px;
     text-align: center;
-    background: $black;
+    background: $blue-light;
     color: $white;
 }
 
@@ -73,20 +72,11 @@ footer {
     color: $white;
 }
 
-//.input_field {
-//    &:focus {
-//        ~ .clear-input {
-//            display: inline-block;
-//        }
-//    }
-//}
-
 .clear-input {
     padding: 10px;
     position: relative;
     float: right;
     display: none;
-    //display: inline-block;
     background: $gray;
     &.show-inlineBlock{
         display: inline-block;

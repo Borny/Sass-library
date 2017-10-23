@@ -20,7 +20,7 @@
         margin: 0;
         color: $blue;
         font-size: 32px;
-        border-bottom: 1px solid $blue-light1;
+        border-bottom: 1px solid $blue-light;
         &:after {
             @include animate;
             content: '';
@@ -36,7 +36,7 @@
     }
 }
 
-input[type=checkbox] {
+.collapse-input {
     display: none;
     //checkbox in checked state
     &:checked {
