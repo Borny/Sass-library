@@ -25,10 +25,10 @@ modalInput.addEventListener('change',function(){
 // INPUT LABEL ANIMATION
 //////////////////////////
 
-//Gets all the input_field elements of the page
-
-//Goes through the array inputField
+// Gets all the input_field elements of the page
 var inputField = document.querySelectorAll('.input_field');
+
+// Goes through the array inputField
 inputField.forEach(function (e) {
 
     // Creates an event listener on the current input_field

@@ -2,7 +2,7 @@
 @import 'tools/variables';
 @import 'tools/mixins';
 @import 'tools/placeholders';
-@import 'grid/grid';
+@import 'tools/grid';
 
 // MODULES
 @import 'collapse/collapse';
@@ -52,33 +52,39 @@ body {
 
 [class^='col-'],
 .column {
-    padding: 20px;
+    padding: 15px;
     margin: 10px 0 0;
     border: 1px solid $black;
     border-radius: 4px;
 }
 
+.tab-container {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 200px;
+}
+
+.input_container{
+    margin: 30px auto;
+}
+
+///////////
+// HEADER
+///////////
 header {
+    margin: 0 0 30px;
     padding: 30px;
     text-align: center;
     background: $blue-light;
     color: $white;
 }
 
+///////////
+// FOOTER
+///////////
 footer {
     text-align: center;
     padding: 40px;
     background: $black;
     color: $white;
-}
-
-.clear-input {
-    padding: 10px;
-    position: relative;
-    float: right;
-    display: none;
-    background: $gray;
-    &.show-inlineBlock{
-        display: inline-block;
-    }
 }

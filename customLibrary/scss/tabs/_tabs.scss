@@ -1,9 +1,4 @@
-.tab-container {
-    display: inline-block;
-    vertical-align: top;
-    min-height: 200px;
-}
-
+// Tab button
 .tab-btn {
     display: block;
     background: $blue;
@@ -17,17 +12,15 @@
     font-weight: bold;
     &:hover,
     &:focus {
-        background: lighten($blue, 5);
+        background: $blue-light;
         cursor: pointer;
     }
     &:active {
-        background: darken($blue, 5);
+        background: $blue-dark;
     }
 }
 
-
-
-
+// Tab content
 .tab-content {
     position: absolute;
     display: none;
@@ -35,17 +28,18 @@
     left: 0;
     margin: 0;
     padding: 15px;
-    background: darken($blue, 5);
+    background: $blue-dark;
     color: $white;
 }
 
+// Tab radio input
 .tab-input {
     position: absolute;
     visibility: hidden;
     opacity: 0;
     &:checked {
         ~ .tab-btn {
-            background: darken($blue, 5);
+            background: $blue-dark;
         }
         ~ .tab-content {
             display: block;

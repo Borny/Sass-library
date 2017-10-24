@@ -1,18 +1,20 @@
-//This file makes use of a checkbox as a collapse trigger,
-//which doesn't require JavaScript
+// This file makes use of a checkbox as a collapse trigger,
+// which doesn't require JavaScript
+// The main drawback is that the uncollapsed elements don't collapse back when another one is open  
 
-//collapse button element
+// Collapse button element
 .collapse-btn {
-    @include animate;
     display: block;
     min-height: 70px;
     margin: 0 auto;
     padding: 10px 15px;
     overflow: hidden;
-    cursor: pointer;
     background: $white;
     border-radius: 4px;
-    &:hover{
+    cursor: pointer;
+    @extend %transition;
+    &:hover,
+    &:focus{
         background: lighten($blue, 40);
     }
     > p {
@@ -21,34 +23,54 @@
         color: $blue;
         font-size: 32px;
         border-bottom: 1px solid $blue-light;
-        &:after {
-            @include animate;
-            content: '';
+    }
+    .iconPlus {
+        position: absolute;
+        width: 20px;
+        right: 20px;
+        top: 20px;
+        @extend %transition;
+        .plus {
+            display: block;
+            width: 4px;
+            height: 20px;
+            margin: 0 auto;
+            border-radius: 2px;
+            background: $blue;
+        }
+        .minus {
             position: absolute;
-            right: 0;
-            top: 20px;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 10px 8px 0 8px;
-            border-color: $blue transparent transparent transparent;
+            display: inline-block;
+            width: 20px;
+            height: 4px;
+            top: 8px;
+            border-radius: 2px;
+            background: $blue;
+            @extend %transition;
         }
     }
 }
 
+// Collapse checkbox
 .collapse-input {
     display: none;
-    //checkbox in checked state
+
+    // Checkbox in checked state
     &:checked {
         ~ .collapse-btn {
-            p {
-                &:after {
-                    -webkit-transform: rotate(540deg);
-                    -moz-transform: rotate(540deg);
-                    -ms-transform: rotate(540deg);
-                    -o-transform: rotate(540deg);
-                    transform: rotate(540deg);
-                }
+            .iconPlus {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            .minus {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
             }
         }
         ~ .collapse-content {
@@ -66,6 +88,7 @@
     }
 }
 
+// Collapse content
 .collapse-content {
     @include animate;
     position: absolute;
