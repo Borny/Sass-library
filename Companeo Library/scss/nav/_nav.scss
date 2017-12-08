@@ -1,0 +1,101 @@
+/////////////////////
+// NAVIGATION BLOCK 
+/////////////////////
+
+.btn-nav_open {
+    display: block;
+    width: 270px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 4px;
+    background: $blue;
+    text-align: center;
+    color: $white;
+    font-weight: bold;
+    cursor: pointer;
+    @extend %transition;    
+    &:hover,
+    &:focus,
+    &:active {
+        background: darken($blue, 5);
+    }
+}
+
+.btn-nav_close {
+    float: right;
+    margin: -30px 10px 0 0;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background: $red;
+    text-align: center;
+    color: $white;
+    font-weight: bold;
+    @extend %transition;
+    &:hover,
+    &:focus {
+        background: lighten($red, 5);
+        cursor: pointer;
+    }
+    &:active {
+        background: darken($red, 5);
+    }
+}
+
+.nav-container {
+    .nav-overlay {
+
+        // nav background
+        display: none;
+        background: rgba(0,0,0,.6);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: $zindex-nav-overlay;
+    }
+    nav {
+
+        // The nav is fixed on the right side of the screen
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        padding: 35px 0 0;
+        height: 100%;
+        background: $white;
+        z-index: $zindex-nav-dialog;
+        @extend %transition;
+        ul {
+            list-style-type: none;
+            li{
+                padding: 10px;
+                border-bottom: 1px solid lighten($gray, 50%);
+                @extend %transition;
+                &:hover,
+                &:focus{
+                    cursor: pointer;
+                    background: lighten($gray, 50%);
+                }
+            }
+        }
+    }
+}
+
+.nav-input {
+
+    // We hide the checkbox input
+    position: absolute;
+    left: -10000px;
+    opacity: 0;
+    &:checked{
+    
+        // Displays the nav
+        ~ .nav-overlay {
+            display: block;
+        }
+        ~ nav{
+            right: 0;
+         }
+    }
+}
