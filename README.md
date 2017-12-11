@@ -1,4 +1,4 @@
-# Sass Library
+# Companeo Library
 
 ## This is a custom library using HTLM 5 and CSS 3 (and some JavaScript !)
 
@@ -8,6 +8,7 @@
 - A navigation using checkbox input
 - Tabs using radio inputs 
 - Modals using checkbox inputs
+- Collapsing elements using checkbox inputs
 - Inputs with an animation on focus
 
 ### Grid system
