@@ -1,4 +1,4 @@
-# Sass Library
+# Companeo Library
 
 ## This is a custom library using HTLM 5 and CSS 3 (and some JavaScript !)
 
@@ -8,6 +8,7 @@
 - A navigation using checkbox input
 - Tabs using radio inputs 
 - Modals using checkbox inputs
+- Collapsing elements using checkbox inputs
 - Inputs with an animation on focus
 
 ### Grid system
@@ -37,3 +38,14 @@ When it is checked then the modal appears on the screen.
 The 'label' element is styled like a button and is used as a trigger to open the modal. The modal can be closed using another 'label' element styled like a close button. It can also be closed by clicking anywhere around the modal on a 'label' element that is displayed when the modal opens and takes 100% of the screen.
 
 Some JavaScript is used so that the scroll is disabled on the 'body' element when the modal is opened.
+
+### Collapse
+
+The **collapse** elements are animated with checkbox.
+By default the checkbox is unchecked and the element is collapsed. So when the checkbox is triggered with the label the element opens up and the content is displayed.
+Unfortunately the collapse elements can't interact with each other without JavaScript. So an open element won't collapse if another one is opened.
+
+### Input Text
+
+The **input text** are animated using the focus state.
+They are kept focused with JavaScript as CSS and HTML alone won't work.
